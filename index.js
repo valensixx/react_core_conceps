@@ -12,11 +12,17 @@ const reactContentRoot = document.getElementById('root');
      //React creates the elements in the content of html and ReactDOM renders this elements into the DOM
 //);
 
+const App = () => {  //creating a React Component ---> is reusable peace of code (container) which contain elements like div in HTML.
+    
+}
+
+const myItem = 'item3';
  //we can also use JSX a syntax used insted of HTML in .js files   
 const myJSXElement = (
     <ul>
         <li>item1</li>
         <li>item2</li>
+        <li>{myItem.toUpperCase()}</li>
     </ul>
 )
 
