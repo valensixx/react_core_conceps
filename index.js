@@ -19,4 +19,6 @@ const myJSXElement = (
         <li>item2</li>
     </ul>
 )
+
+//we can use Bable to transfer the code of jsx to javaScript code. 
 ReactDOM.render(myFirstElement , reactContentRoot);
