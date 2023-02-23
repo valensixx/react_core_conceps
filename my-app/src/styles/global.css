@@ -2,3 +2,7 @@
     background-color: rgb(108, 0, 108);
     font-size: 1.5rem;
 }
+
+button{
+    width: 100px;
+}
