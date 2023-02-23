@@ -17,7 +17,6 @@ const CountButton = (props) => {
         //color: "magenta", //here is opject (color:) and value ("magenta")
         //border: "1px solid orange",
         background: props.buttonColor,
-        borderRadius: "10px",
     }
 
     return (
