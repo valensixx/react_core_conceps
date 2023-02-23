@@ -6,12 +6,12 @@ const CountButton = (props) => {  //react props gives us a way to change and spe
     const [currtntCount, setCurrentCount] = useState(0); //this is the hook
 
     const handleClick = () => {
-        setCurrentCount( currtntCount + 1);
+        setCurrentCount( currtntCount + props.incrementBy);
     };
 
     return (
         <div>
-            <button onClick={handleClick}>+1</button>
+            <button onClick={handleClick}>+{props.incrementBy}</button>
             <div>{currtntCount}</div>
         </div>
     );
