@@ -9,8 +9,12 @@ const CountButton = (props) => {  //react props gives us a way to change and spe
         setCurrentCount( currtntCount + props.incrementBy);
     };
 
+    const divStyle = { //we can use props to style like in css
+
+    }
+
     return (
-        <div>
+        <div style = {divStyle}>
             <button onClick={handleClick}>+{props.incrementBy}</button>
             <div>{currtntCount}</div>
         </div>
