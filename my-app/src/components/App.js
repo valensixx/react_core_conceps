@@ -1,3 +1,6 @@
+import React from 'react';
+
+
 const App = () => {  
     const myItem = 'item3';
     return (
@@ -10,3 +13,5 @@ const App = () => {
         )
     )
 }
+
+export default App;
