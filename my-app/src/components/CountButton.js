@@ -10,7 +10,9 @@ const CountButton = (props) => {  //react props gives us a way to change and spe
     };
 
     const divStyle = { //we can use props to style like in css
-
+        color: "magenta", //here is opject (color:) and value ("magenta")
+        border: "1px solid orange",
+        borderRadius: "10px",
     }
 
     return (
