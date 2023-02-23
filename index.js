@@ -36,4 +36,6 @@ const App = () => {  //creating a React Component ---> is reusable peace of code
 //)
 
 //we can use Bable to transfer the code of jsx to javaScript code. 
-ReactDOM.render(myJSXElement, reactContentRoot);
+//ReactDOM.render(myJSXElement, reactContentRoot);
+
+ReactDOM.render(<App />, reactContentRoot);
