@@ -4,9 +4,9 @@ import CountButton from './CountButton';
 const App = () => {  
     return (
        <div>
-            <CountButton incrementBy={1} />
-            <CountButton incrementBy={5} />
-            <CountButton incrementBy={7} />
+            <CountButton incrementBy={1} buttonColor={'red'} />
+            <CountButton incrementBy={5} buttonColor={'green'} />
+            <CountButton incrementBy={7} buttonColor={'blue'} />
        </div>
     )
 }
