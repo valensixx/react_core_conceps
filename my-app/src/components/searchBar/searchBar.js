@@ -1,8 +1,12 @@
 import React from "react";
 import "./searchBar.css";
 
-const searchBar = () => {
-    return <div></div>
+const SearchBar = () => {
+    return (
+        <div>
+            <input type = "text" />
+        </div>
+    )
 };
 
-export default searchBar;
+export default SearchBar;
