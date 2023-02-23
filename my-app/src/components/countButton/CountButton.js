@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import "./CountButton.css";
 //{useState} is a React hook == takes the code we write from reactDOM and displays it;
 //without react hook we can not see changes in code; The changes are only visible in the DOM and in the console 
 const CountButton = (props) => {  
@@ -22,7 +23,7 @@ const CountButton = (props) => {
     return (
         <div>
             <button style = {buttonStyles} onClick={handleClick}>+{props.incrementBy}</button>
-            <div>{currtntCount}</div>
+            <div className={"count-display"}>{currtntCount}</div>
         </div>
     );
 
