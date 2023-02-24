@@ -1,6 +1,5 @@
 import React from 'react';
 //import CountButton from './countButton/CountButton';
-import searchBar from './searchBar/searchBar';
 
 const App = () => {  
     return (
