@@ -19,21 +19,33 @@ const SearchBar = () => {
         setSearchValue("");
     }
 
-    console.log(
-        products.map((products) =>{
-            return products.toUpperCase()
-        })
-    )
+    //console.log(
+        //products.map((products) =>{
+            //return products.toUpperCase()
+        //})
+    //)
 
     const shouldDisplayButton = searchValue.length > 0; // this is conditional rendering!!! Boolean expresion (true or false).
+
+    
+       const filterProducts = products.filter((products)=>{
+            return products.includes(searchValue);
+        });
+   
 
     return (
     <div>
         <input type="text" value={searchValue} onChange={handleInputChange} />
          { shouldDisplayButton && <button onClick={handleClearClick}> clear </button> }
 
+        <ul>
+            {filterProducts.map((products) =>{
+                return <li key={products}>{products}</li>
+            })}
+        </ul>
+        
     </div>
-    )
+    );
 }
 
 export default SearchBar;
