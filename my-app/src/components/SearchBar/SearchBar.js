@@ -13,9 +13,14 @@ const SearchBar = () => {
     const handleClearClick = () => {
         setSearchValue("");
     }
+
+    const shouldDisplayButton = searchValue.length > 0; // this is conditional rendering!!! Boolean expresion (true or false).
+
     return <div>
         <input type="text" value={searchValue} onChange={handleInputChange} />
-        <button onClick={handleClearClick}>clear</button>
+
+         { shouldDisplayButton && <button onClick={handleClearClick}> clear </button> }
+        
     </div>
 }
 
