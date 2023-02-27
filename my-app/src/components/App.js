@@ -2,10 +2,15 @@ import React from 'react';
 import CountButton from './countButton/CountButton';
 import SearchBar from './SearchBar/SearchBar';
 
+
+const products = [
+    'el. guitar' , 'bass' , 'drums' , 'mic', 
+];
+
 const App = () => {  
     return (
         <div>
-            <SearchBar />
+            <SearchBar products = {products} />
         </div>
        //<div>
            // <CountButton incrementBy={1} buttonColor={'red'} />

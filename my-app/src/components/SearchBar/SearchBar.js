@@ -2,11 +2,7 @@ import React, {useState} from "react";
 import './SearchBar.css';
 
 
-const products = [
-    'el. guitar' , 'bass' , 'drums' , 'mic', 
-];
-
-const SearchBar = () => {
+const SearchBar = (props) => {
     const [searchValue, setSearchValue] = useState("");
 
     const handleInputChange = (event) => {
@@ -28,7 +24,7 @@ const SearchBar = () => {
     const shouldDisplayButton = searchValue.length > 0; // this is conditional rendering!!! Boolean expresion (true or false).
 
     
-       const filterProducts = products.filter((products)=>{
+       const filterProducts = props.products.filter((products)=>{
             return products.includes(searchValue);
         });
    
@@ -41,7 +37,8 @@ const SearchBar = () => {
         <ul>
             {filterProducts.map((products) =>{
                 return <li key={products}>{products}</li>
-            })}
+            })
+            }
         </ul>
         
     </div>
