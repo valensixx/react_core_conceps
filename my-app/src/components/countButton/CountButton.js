@@ -22,7 +22,11 @@ const CountButton = (props) => {
 
     //useEffect hook !!! IMPORTANT to put array []  !!! Whitout [] will be render infinete loop.
     useEffect(() => {
-        console.log("Called when component mounts or the currentCount is updated!");
+        if(currtntCount === 10){
+            //alert("the count is 10");
+            setCurrentCount(0);
+        }
+        //console.log("Called when component mounts or the currentCount is updated!");
     }, [currtntCount]);
 
     //useEffect(() => {

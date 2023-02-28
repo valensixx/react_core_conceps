@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CountButton from './countButton/CountButton';
 import SearchBar from './SearchBar/SearchBar';
 
@@ -6,24 +6,28 @@ import SearchBar from './SearchBar/SearchBar';
 
 
 const App = () => {  
+
+    const [productsState, setProductsState] = useState([]);
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setProductsState([
+                'el. guitar' , 
+                'bass' , 
+                'drums' , 
+                'mic', 
+            ])       
+        }, 2000)
+    }, []);
+
     return (
 
-        <CountButton incrementBy={5} buttonColor="blue" />
+        //<CountButton incrementBy={5} buttonColor="blue" />
 
-        //<div>
-           // <SearchBar products = {
-             //   [
-              //      'el. guitar' , 'bass' , 'drums' , 'mic', 
-              //  ]
-              //  } 
-           // />
-            // <SearchBar products = {
-             //   [
-              //      'guitar pick' , 'bass pick' , 'drums stick' , 'mic stand', 
-             //   ]
-              //  } 
-            ///>
-        //</div>
+        <div>
+            <SearchBar products = {productsState} />
+        </div>
+
        //<div>
            // <CountButton incrementBy={1} buttonColor={'red'} />
            // <CountButton incrementBy={5} buttonColor={'green'} />
