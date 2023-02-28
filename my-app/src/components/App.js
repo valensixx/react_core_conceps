@@ -20,12 +20,17 @@ const App = () => {
         }, 2000)
     }, []);
 
+
+    const hasProducts = productsState.length > 0;
+
     return (
 
         //<CountButton incrementBy={5} buttonColor="blue" />
 
         <div>
-            <SearchBar products = {productsState} />
+
+            {hasProducts ? <SearchBar products = {productsState} /> : 'loading'}
+            
         </div>
 
        //<div>
