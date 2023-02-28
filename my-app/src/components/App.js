@@ -10,14 +10,25 @@ const App = () => {
     const [productsState, setProductsState] = useState([]);
 
     useEffect(()=>{
-        setTimeout(()=>{
-            setProductsState([
-                'el. guitar' , 
-                'bass' , 
-                'drums' , 
-                'mic', 
-            ])       
-        }, 2000)
+
+        fetch('https://fakestoreapi.com/products')
+        .then(res => res.json())
+        .then((productsArray) => {
+            const newProductsState = productsArray.map((product)=>{
+                return product.title
+            });
+            setProductsState(newProductsState);
+        });
+
+
+        //setTimeout(()=>{
+           // setProductsState([
+               // 'el. guitar' , 
+               // 'bass' , 
+               // 'drums' , 
+              //  'mic', 
+           // ])       
+       // }, 2000)
     }, []);
 
 
