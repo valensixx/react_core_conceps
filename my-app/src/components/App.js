@@ -3,14 +3,23 @@ import CountButton from './countButton/CountButton';
 import SearchBar from './SearchBar/SearchBar';
 
 
-const products = [
-    'el. guitar' , 'bass' , 'drums' , 'mic', 
-];
+
 
 const App = () => {  
     return (
         <div>
-            <SearchBar products = {products} />
+            <SearchBar products = {
+                [
+                    'el. guitar' , 'bass' , 'drums' , 'mic', 
+                ]
+                } 
+            />
+             <SearchBar products = {
+                [
+                    'guitar pick' , 'bass pick' , 'drums stick' , 'mic stand', 
+                ]
+                } 
+            />
         </div>
        //<div>
            // <CountButton incrementBy={1} buttonColor={'red'} />
