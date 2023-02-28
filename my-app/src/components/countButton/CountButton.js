@@ -21,7 +21,13 @@ const CountButton = (props) => {
     }
 
     //useEffect hook !!! IMPORTANT to put array []  !!! Whitout [] will be render infinete loop.
-    useEffect(() => {}, [])
+    useEffect(() => {
+        console.log("Called when component mounts or the currentCount is updated!");
+    }, [currtntCount]);
+
+    //useEffect(() => {
+        //console.log("Only called when component mounts");
+    //}, []);
 
     return (
         <div>
