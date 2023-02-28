@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import "./CountButton.css";
 //{useState} is a React hook == takes the code we write from reactDOM and displays it;
 //without react hook we can not see changes in code; The changes are only visible in the DOM and in the console 
@@ -19,6 +19,9 @@ const CountButton = (props) => {
         //border: "1px solid orange",
         background: props.buttonColor,
     }
+
+    //useEffect hook !!! IMPORTANT to put array []  !!! Whitout [] will be render infinete loop.
+    useEffect(() => {}, [])
 
     return (
         <div>

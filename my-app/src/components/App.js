@@ -7,20 +7,23 @@ import SearchBar from './SearchBar/SearchBar';
 
 const App = () => {  
     return (
-        <div>
-            <SearchBar products = {
-                [
-                    'el. guitar' , 'bass' , 'drums' , 'mic', 
-                ]
-                } 
-            />
-             <SearchBar products = {
-                [
-                    'guitar pick' , 'bass pick' , 'drums stick' , 'mic stand', 
-                ]
-                } 
-            />
-        </div>
+
+        <CountButton incrementBy={5} buttonColor="blue" />
+
+        //<div>
+           // <SearchBar products = {
+             //   [
+              //      'el. guitar' , 'bass' , 'drums' , 'mic', 
+              //  ]
+              //  } 
+           // />
+            // <SearchBar products = {
+             //   [
+              //      'guitar pick' , 'bass pick' , 'drums stick' , 'mic stand', 
+             //   ]
+              //  } 
+            ///>
+        //</div>
        //<div>
            // <CountButton incrementBy={1} buttonColor={'red'} />
            // <CountButton incrementBy={5} buttonColor={'green'} />
