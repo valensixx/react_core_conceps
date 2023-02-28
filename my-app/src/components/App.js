@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CountButton from './countButton/CountButton';
 import SearchBar from './SearchBar/SearchBar';
-
+import Button from './Button/Button';
 
 
 
@@ -40,7 +40,11 @@ const App = () => {
 
         <div>
 
-            {hasProducts ? <SearchBar products = {productsState} /> : 'loading'}
+            <Button>Button1</Button>
+            <Button>Button2</Button>
+            <Button>Button3</Button>
+
+           {/*{hasProducts ? <SearchBar products = {productsState} /> : 'loading'}*/} 
             
         </div>
 
